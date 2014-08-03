@@ -6,11 +6,18 @@ a = {
 }
 
 window.onload = ->
+  document.querySelector('._reset').addEventListener 'click', (e)->
+    e.preventDefault()
+    Score.set(0)
+
   Score = {
     $el: document.querySelector('._score'),
     _score: 0,
     incrementScore: ->
       @_score += 1
+      @$el.innerHTML = @_score
+    set: (n)->
+      @_score = n
       @$el.innerHTML = @_score
   }
   window.addEventListener 'devicemotion', (e)->
