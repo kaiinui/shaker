@@ -1,0 +1,16 @@
+body, html{
+  height: 100%;
+}
+
+.score-outer{
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.score{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 50px;
+}
